@@ -1,0 +1,50 @@
+@font-face {
+    font-family: myFont;
+    src: url(snes.ttf);
+}
+
+:root{
+    --gradient: linear-gradient(
+        to right, 
+        rgb(158, 225, 254), 
+        rgb(245, 209, 255),
+        rgb(249, 147, 110)
+    );
+}
+
+@keyframes bg-animation {
+    0% {background-position: top left}
+    100% {background-position: bottom right;}
+}
+
+body{
+   
+    font-family: myFont;
+    background-image: var(--gradient);
+    background-size: 200%;
+    animation: bg-animation 8s infinite alternate;
+}
+
+.welcome-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+
+}
+
+#button{
+    font-family: myFont;
+    background: none;
+    border: none;
+    font-size: 200px;
+    transition: 100ms;
+}
+
+#button:hover{
+    
+    transform: scale(1.05);
+    color: aliceblue;
+}
+
